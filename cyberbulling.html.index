@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conscientização sobre Cyberbullying</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f7f6;
+        }
+        header {
+            background-color: #4A90E2;
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        nav {
+            background-color: #2c3e50;
+            padding: 0.8rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #4A90E2;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .hero-img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #4A90E2;
+            border-bottom: 2px solid #4A90E2;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        .card-ajuda {
+            background-color: #e9f5ff;
+            border-left: 5px solid #4A90E2;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        /* Estilos do Quiz Interativo */
+        .quiz-container {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .quiz-option {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .quiz-option:hover {
+            background: #eef;
+        }
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #2c3e50;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Juntos Contra o Cyberbullying</h1>
+        <p>A internet deve ser um espaço seguro e de respeito para todos.</p>
+    </header>
+
+    <nav>
+        <a href="#o-que-e">O que é</a>
+        <a href="#como-prevenir">Prevenção</a>
+        <a href="#test-seus-conhecimentos">Quiz</a>
+        <a href="#ajuda">Onde Buscar Ajuda</a>
+    </nav>
+
+    <div class="container">
+        
+        <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRCVJRZ6a55XqPHWndtt9WrrZHD7cy_RBKre6uFyRnWhzJJHp53Qi4jkUGLKarqALkpptj8HqWsUb2_YdU" alt="Ilustração sobre conscientização do Cyberbullying" class="hero-img">
+
+        <section id="o-que-e">
+            <h2>O que é Cyberbullying?</h2>
+            <p>Cyberbullying é a prática de praticar violência psicológica contra alguém através da internet, redes sociais, aplicativos de mensagens ou jogos online. Pode incluir insultos, espalhar boatos, vazamento de fotos sem consentimento ou intimidação constante.</p>
+        </section>
+
+        <section id="como-prevenir">
+            <h2>Como Prevenir e Agir</h2>
+            <ul>
+                <li><strong>Não responda à provocação:</strong> Quem pratica o cyberbullying costuma buscar uma reação.</li>
+                <li><strong>Guarde as evidências:</strong> Tire capturas de tela (printscreen) de conversas e publicações.</li>
+                <li><strong>Bloqueie o agressor:</strong> Utilize as ferramentas das plataformas digitais para bloquear o contato.</li>
+                <li><strong>Denuncie na plataforma:</strong> As redes sociais possuem botões para denunciar conteúdos ofensivos.</li>
+                <li><strong>Converse com alguém de confiança:</strong> Fale com seus pais, professores ou um responsável.</li>
+            </ul>
+        </section>
+
+        <section id="test-seus-conhecimentos">
+            <h2>Quiz: Teste seus Conhecimentos</h2>
+            <div class="quiz-container">
+                <p><strong>Pergunta:</strong> Se você receber uma foto constrangedora de um colega em um grupo, o que deve fazer?</p>
+                <button class="quiz-option" onclick="verificarResposta(false)">Encaminhar para outros amigos para alertá-los.</button>
+                <button class="quiz-option" onclick="verificarResposta(true)">Não repassar, apagar a imagem e avisar um adulto ou responsável.</button>
+                <button class="quiz-option" onclick="verificarResposta(false)">Comentar no grupo rindo do ocorrido.</button>
+                <div id="feedback" class="feedback"></div>
+            </div>
+        </section>
+
+        <section id="ajuda">
+            <h2>Onde Buscar Ajuda</h2>
+            <p>Se você ou alguém que você conhece está passando por isso, não guarde para si:</p>
+            
+            <div class="card-ajuda">
+                <p><strong>SaferNet Brasil:</strong> Orientação para crimes cibernéticos. Acesse: <em>helpline.br</em></p>
+                <p><strong>CVV (Centro de Valorização da Vida):</strong> Apoio emocional gratuito. Ligue <strong>188</strong> ou acesse <em>cvv.org.br</em>.</p>
+                <p><strong>Disque 100:</strong> Canal de denúncias de violações de direitos humanos.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Projeto de Conscientização Digital</p>
+    </footer>
+
+    <script>
+        function verificarResposta(correta) {
+            const feedbackElem = document.getElementById('feedback');
+            if (correta) {
+                feedbackElem.style.color = 'green';
+                feedbackElem.textContent = 'Correto! Repassar imagens constrangedoras aumenta o dano. A melhor atitude é interromper a corrente e buscar ajuda.';
+            } else {
+                feedbackElem.style.color = 'red';
+                feedbackElem.textContent = 'Incorreto. Essa atitude pode espalhar o cyberbullying. Tente novamente!';
+            }
+        }
+    </script>
+
+</body>
+</html>
